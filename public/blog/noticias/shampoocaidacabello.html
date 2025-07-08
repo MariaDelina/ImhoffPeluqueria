@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ELIZABET IMHOFF | Peluquería en Santa Fe, Argentina</title>
+    <meta
+      name="description"
+      content="Descubre la mejor peluquería en Santa Fe, Argentina. En ELIZABET IMHOFF ofrecemos cortes de pelo, coloraciones y tratamientos capilares excepcionales. ¡Visítanos!"
+    />
+    <meta
+      name="keywords"
+      content="peluquería, Santa Fe, Argentina, cortes de pelo, coloración, tratamientos capilares, ELIZABET IMHOFF"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="preload" href="../../styles.css" as="style" />
+    <link rel="icon" href="../../assets/logosinfondo.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../menu.js" defer></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+      }
+      h2 {
+        color: rgb(165, 2, 2);
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .content-wrapper {
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+      }
+      .content {
+        flex: 2;
+        margin-left: 20px;
+        opacity: 0;
+        animation: fadeInText 2s forwards;
+        color: grey;
+      }
+      .full-width-image {
+        width: 100%;
+        height: 600px; /* Altura moderada */
+        object-fit: cover;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+      }
+      .image {
+        flex: 1;
+        transform: translateX(-100%);
+        opacity: 0;
+        animation: slideIn 1s forwards;
+        width: 400px;
+      }
+      @keyframes slideIn {
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes fadeInText {
+        0% {
+          color: grey;
+          opacity: 0;
+        }
+        100% {
+          color: black;
+          opacity: 1;
+        }
+      }
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .container {
+          padding: 15px;
+        }
+        .content-wrapper {
+          flex-direction: column;
+          align-items: center;
+        }
+        .image,
+        .content {
+          flex: unset;
+          margin: 0;
+          width: 100%;
+        }
+        .content {
+          margin-top: 20px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 10px;
+        }
+        .full-width-image {
+          height: 200px; /* Altura reducida para pantallas pequeñas */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 5px;
+        }
+        .content-wrapper {
+          flex-direction: column;
+          align-items: center;
+        }
+        .content {
+          margin-top: 15px;
+          font-size: 14px; /* Tamaño de fuente reducido para pantallas muy pequeñas */
+        }
+        .full-width-image {
+          height: 150px; /* Altura reducida para pantallas muy pequeñas */
+        }
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $("#contenidoHeader").load("../../header.html", function () {
+          initializeMenu();
+        });
+        $(".content").each(function (i) {
+          $(this).css("animation-delay", i * 1.5 + "s");
+        });
+        $(".image").each(function (i) {
+          $(this).css("animation-delay", i * 1.5 + "s");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="contenidoHeader"></div>
+    <div class="container">
+      <h2>¿Shampoo Milagroso? Lo Que Realmente Necesitas para el Crecimiento Capilar</h2>
+      <div class="content-wrapper">
+        <img
+          class="image"
+          src="../assets/hair-6361059_1280.jpg"
+          alt="Tinte Semipermanente"
+        />
+        <div class="content">
+          <p>
+            Los shampoos, incluso aquellos de laboratorios reconocidos, no son efectivos para promover el crecimiento del cabello. Un shampoo para el crecimiento del cabello no existe, ya que es un producto que aplicas y luego enjuagas, lo que impide que sea absorbido. ¿Cómo va a estimular el folículo piloso si lo has enjuagado? El shampoo está diseñado únicamente para limpiar el cuero cabelludo y el cabello, pero no puede estimular el crecimiento en la raíz del cabello. Para que se produzca una verdadera estimulación del crecimiento, el producto debe permanecer en contacto con el cuero cabelludo durante un mínimo de cuatro horas; sin embargo, normalmente dejamos el shampoo solo un par de minutos.
+          </p>
+
+          <p>
+            Por eso te digo que ni los remedios caseros ni los shampoos de laboratorios prestigiosos van a lograr que te crezca el cabello. Para fomentar el crecimiento capilar es fundamental abordar la causa subyacente y proporcionar el tratamiento adecuado. En este caso, lo que realmente puede estimular el crecimiento son los medicamentos o tratamientos especializados, no los shampoos. Si deseas ver resultados, invierte tu dinero en medicinas o terapias que estén comprobadas, en lugar de gastar en shampoos que no te ofrecerán el cambio que buscas.
+          </p>
+
+          
+        </div>
+      </div>
+      <img
+        class="full-width-image"
+        src="../assets/woman-3999428_1280.jpg"
+        alt="Tinte Semipermanente"
+      />
+    </div>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">ELIZABET IMHOFF</div>
+        <div class="footer-info">
+          <p>
+            Dirección: Av. Gral. Paz 6000 , Santa Fe de la Vera Cruz, Santa Fe
+          </p>
+          <p>Teléfono: +54 9 342 479-9583</p>
+          <p>Facebook: ElizabetImhoffPeluqueria</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

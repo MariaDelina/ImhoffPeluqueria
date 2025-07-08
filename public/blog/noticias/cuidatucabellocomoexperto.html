@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELIZABET IMHOFF | Peluquería en Santa Fe, Argentina</title>
+    <meta name="description" content="Descubre la mejor peluquería en Santa Fe, Argentina. En ELIZABET IMHOFF ofrecemos cortes de pelo, coloraciones y tratamientos capilares excepcionales. ¡Visítanos!">
+    <meta name="keywords" content="peluquería, Santa Fe, Argentina, cortes de pelo, coloración, tratamientos capilares, ELIZABET IMHOFF">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preload" href="../../styles.css" as="style">
+    <link rel="icon" href="../../assets/logosinfondo.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../menu.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        h2{
+            color: rgb(165, 2, 2);
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .content-wrapper {
+            display: flex;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .content {
+            flex: 2;
+            margin-left: 20px;
+            opacity: 0;
+            animation: fadeInText 2s forwards;
+            color: grey;
+        }
+        .full-width-image {
+            width: 100%;
+            height: 600px; /* Altura moderada */
+            object-fit: cover;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        .image {
+            flex: 1;
+            transform: translateX(-100%);
+            opacity: 0;
+            animation: slideIn 1s forwards;
+        }
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInText {
+            0% { color: grey; opacity: 0; }
+            100% { color: black; opacity: 1; }
+        }
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 15px;
+            }
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+            .image, .content {
+                flex: unset;
+                margin: 0;
+                width: 100%;
+            }
+            .content {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .full-width-image {
+                height: 200px; /* Altura reducida para pantallas pequeñas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 5px;
+            }
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+            .content {
+                margin-top: 15px;
+                font-size: 14px; /* Tamaño de fuente reducido para pantallas muy pequeñas */
+            }
+            .full-width-image {
+                height: 150px; /* Altura reducida para pantallas muy pequeñas */
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('#contenidoHeader').load('../../header.html', function() {
+                initializeMenu();
+            });
+            $('.content').each(function(i) {
+                $(this).css('animation-delay', (i * 1.5) + 's');
+            });
+            $('.image').each(function(i) {
+                $(this).css('animation-delay', (i * 1.5) + 's');
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="contenidoHeader"></div>
+<div class="container">
+    <h2>Cuida tu Cabello como un Experto: Consejos para un Cabello Saludable y Sin Frizz</h2>
+    <div class="content-wrapper">
+        <img class="image" src="../assets/females-1450050_1280.jpg" alt="Coloración Semipermanente">
+        <div class="content">
+            <p>Un buen cuidado del cabello es esencial para mantenerlo sano, fuerte y sin frizz. Aquí algunos consejos prácticos y efectivos para mejorar la salud y apariencia de tu cabello:</p>
+            <p>1.	No duermas con el pelo mojado: Esto puede parecer inofensivo, pero dejar el cabello mojado durante mucho tiempo lo debilita. Como el cabello es poroso, el agua lo penetra, lo estira y lo hincha, lo que aumenta el riesgo de que se rompa o se quiebre. Por lo tanto, intenta secarlo antes de dormir, ya sea con secador o dejando que se seque un poco antes de acostarte.</p>
+            <p>2.	Usa acondicionador antes del shampoo: Una técnica poco común, pero eficaz, es aplicar acondicionador en el cabello de medios a puntas antes del shampoo. El acondicionador ayuda a sellar la cutícula del cabello, evitando que el agua penetre excesivamente y cause daño. Aplicarlo antes del shampoo protege el cabello de la deshidratación y le da una capa de protección adicional durante la limpieza.</p>
+            <p>3.	Seca el cabello con secador, no al aire libre: Aunque puede parecer más natural, dejar que el cabello se seque al aire libre puede causar más daño que beneficio. Estudios sugieren que el uso del secador, si se emplea adecuadamente, es mejor para el cabello. Antes de secarlo, asegúrate de aplicar un protector térmico para reducir el impacto del calor. Usa el secador a unos 15 cm de distancia y en una temperatura tibia para minimizar el daño.</p>
+            <p>4.	Controla el frizz: Para mantener el frizz a raya, aplica un aceite hidratante de medios a puntas todos los días. Además, usa una toalla de microfibra para secar el cabello, ya que es menos agresiva que una toalla convencional. Para dormir, considera usar un gorro de seda, ya que este tipo de tela reduce la fricción y mantiene la hidratación del cabello durante la noche.</p>
+            <p>Con estos consejos, podrás mantener tu cabello más sano, brillante y sin frizz. La constancia y el cuidado adecuado son clave para un cabello hermoso y resistente.</p>
+        </div>
+    </div>
+    <img class="full-width-image" src="../assets/pexels-gabby-k-6621442.jpg" alt="Coloración Semipermanente">
+</div>
+<footer> 
+    <div class="footer-content">
+    <div class="footer-logo">ELIZABET IMHOFF</div>
+    <div class="footer-info">
+        <p>Dirección: Av. Gral. Paz 6000 , Santa Fe de la Vera Cruz, Santa Fe</p>
+        <p>Teléfono: +54 9 342 479-9583</p>
+        <p>Facebook: ElizabetImhoffPeluqueria</p>
+    </div>
+</div>
+</footer>
+</body>
+</html>

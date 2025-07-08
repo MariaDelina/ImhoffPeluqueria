@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden !important;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: url('assets/403284282_317275297733636_6888424522857537960_n.webp') no-repeat center center/cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: #f5eaea; /* Burdeos */
+    font-size: 3em;
+    opacity: 0; /* Initial opacity */
+    animation: fadeIn 4s forwards;
+    text-align: center;
+}
+
+.arrow {
+    color: #f5eaea; /* Burdeos */
+    font-size: 2em;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInArrow 4s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInArrow {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.hairstyles {
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.hairstyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.name, .price {
+    font-size: 1.5em;
+    color: #800000;
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+}
+
+.name {
+    flex: 1;
+    text-align: left;
+    padding-left: 20%;
+}
+
+.price {
+    flex: 1;
+    text-align: right;
+    padding-right: 20%;
+}
+
+.name span, .price span {
+    display: inline-block;
+    opacity: 0;
+    animation: appear 1s forwards;
+    transform: translate(0, 0);
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.consultation {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.consultation p {
+    font-size: 1.8em;
+    color: #800000;
+    margin: 0;
+}
+
+footer {
+    background-color: #4b0000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    min-width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos generales del botón flotante */
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia desde el fondo */
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+    background-color: #d4b8b8; /* Color burdeos */
+    border-radius: 50%; /* Botón redondeado */
+    padding: 10px; /* Espacio interno del botón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    z-index: 1000; /* Asegura que esté encima del resto del contenido */
+    transition: background-color 0.3s ease; /* Transición suave para cambios de color */
+}
+
+#whatsapp-button img {
+    width: 40px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    display: block;
+}
+
+/* Efecto hover para el botón */
+#whatsapp-button:hover {
+    background-color: #a03a3a; /* Color burdeos más oscuro al pasar el ratón */
+}
+
+/* Media Queries */
+
+/* Tablets y pantallas menores a 1200px */
+@media (max-width: 1199px) {
+    .title {
+        font-size: 2.5em;
+    }
+
+    .arrow {
+        font-size: 1.5em;
+    }
+
+    .name, .price {
+        font-size: 1.2em;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .consultation p {
+        font-size: 1.5em;
+    }
+}
+
+/* Pantallas menores a 768px */
+@media (max-width: 767px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .arrow {
+        font-size: 1.2em;
+    }
+
+    .name, .price {
+        font-size: 1em;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .consultation p {
+        font-size: 1.2em;
+    }
+}
+
+/* Pantallas menores a 480px */
+@media (max-width: 480px) {
+    .hero {
+        height: 30vh;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    .arrow {
+        font-size: 1em;
+    }
+
+    .name, .price {
+        font-size: 0.8em;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .consultation p {
+        font-size: 1em;
+    }
+}

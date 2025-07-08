@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELIZABET IMHOFF | Peluquería en Santa Fe, Argentina</title>
+    <meta name="description" content="Descubre la mejor peluquería en Santa Fe, Argentina. En ELIZABET IMHOFF ofrecemos cortes de pelo, coloraciones y tratamientos capilares excepcionales. ¡Visítanos!">
+    <meta name="keywords" content="peluquería, Santa Fe, Argentina, cortes de pelo, coloración, tratamientos capilares, ELIZABET IMHOFF">
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preload" href="../styles.css" as="style">
+    <link rel="icon" href="assets/logosinfondo.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Agrega la API de Google Maps en la etiqueta head -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../menu.js" defer></script>
+    <script>
+        $(document).ready(function(){
+            $('#contenidoHeader').load('../header.html', function() {
+                // Inicializa el menú después de que header.html se haya cargado
+                initializeMenu();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="contenidoHeader"></div>
+
+    <div class="contact-container">
+        <div class="contact-content">
+            <div class="contact-image">
+                <img src="assets/Imagen de WhatsApp 2024-07-19 a las 11.15.10_9ba8e3ae.jpg" alt="Imagen del edificio de Peluquería Elizabet Imhoff">
+            </div>
+            <div class="contact-info">
+                <h1>Contacto</h1>
+                <p>Dirección:  Av. Gral. Paz 6000, Santa Fe de la Vera Cruz, Santa Fe</p>
+                <p>Teléfono: +54 9 342 479-9583</p>
+                <p>Instagram:  <a href="https://www.instagram.com/elizabetimhoffpeluqueria/?hl=es-la" target="_blank">ElizabetImhoffPeluqueria</a></p>
+                <p>Facebook:  <a href="https://www.facebook.com/elizabetimhoffpeluqueria/?locale=es_LA" target="_blank">ElizabetImhoffPeluqueria</a></p>
+                <p style="margin-top: 14%;">"La experiencia en nuestra peluquería va más allá de un simple cambio de look. Ofrecemos asesoramiento experto sobre el cuidado del cabello, brindándote recomendaciones personalizadas para mantener tu estilo en su mejor estado. Nuestro objetivo es que no solo salgas de nuestras instalaciones luciendo increíble, sino también sintiéndote seguro de que tu cabello está en las mejores manos."</p>
+            </div>
+
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.662982078611!2d-60.684784324384594!3d-31.615693274170482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b5a9fbb76f5e7d%3A0xe6e1a8f3210559eb!2sPeluqueria%20Elizabet%20Imhoff!5e0!3m2!1ses-419!2sar!4v1721911192690!5m2!1ses-419!2sar" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+     <!-- Botón flotante -->
+ <a href="https://wa.me/543424799583" id="whatsapp-button" target="_blank">
+    <img src="assets/icons8-whatsapp-50.png" alt="WhatsApp">
+</a>
+    <footer> 
+        <div class="footer-content">
+        <div class="footer-logo">ELIZABET IMHOFF</div>
+        <div class="footer-info">
+            <p>Dirección: Av. Gral. Paz 6000 , Santa Fe de la Vera Cruz, Santa Fe</p>
+            <p>Teléfono: +54 9 342 479-9583</p>
+            <p>Facebook: ElizabetImhoffPeluqueria</p>
+        </div>
+    </div>
+    </footer>
+    <script src="contacto.js"></script>
+</body>
+</html>

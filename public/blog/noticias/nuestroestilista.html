@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ELIZABET IMHOFF | Peluquería en Santa Fe, Argentina</title>
+    <meta
+      name="description"
+      content="Descubre la mejor peluquería en Santa Fe, Argentina. En ELIZABET IMHOFF ofrecemos cortes de pelo, coloraciones y tratamientos capilares excepcionales. ¡Visítanos!"
+    />
+    <meta
+      name="keywords"
+      content="peluquería, Santa Fe, Argentina, cortes de pelo, coloración, tratamientos capilares, ELIZABET IMHOFF"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="preload" href="../../styles.css" as="style" />
+    <link rel="icon" href="../../assets/logosinfondo.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../menu.js" defer></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+      }
+      h2 {
+        color: rgb(165, 2, 2);
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .content-wrapper {
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+      }
+      .content {
+        flex: 2;
+        margin-left: 20px;
+        opacity: 0;
+        animation: fadeInText 2s forwards;
+        color: grey;
+      }
+      .full-width-image {
+        width: 100%;
+        height: 600px; /* Altura moderada */
+        object-fit: cover;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+      }
+      .image {
+        flex: 1;
+        transform: translateX(-100%);
+        opacity: 0;
+        animation: slideIn 1s forwards;
+        width: 400px;
+      }
+      @keyframes slideIn {
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes fadeInText {
+        0% {
+          color: grey;
+          opacity: 0;
+        }
+        100% {
+          color: black;
+          opacity: 1;
+        }
+      }
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .container {
+          padding: 15px;
+        }
+        .content-wrapper {
+          flex-direction: column;
+          align-items: center;
+        }
+        .image,
+        .content {
+          flex: unset;
+          margin: 0;
+          width: 100%;
+        }
+        .content {
+          margin-top: 20px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 10px;
+        }
+        .full-width-image {
+          height: 200px; /* Altura reducida para pantallas pequeñas */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 5px;
+        }
+        .content-wrapper {
+          flex-direction: column;
+          align-items: center;
+        }
+        .content {
+          margin-top: 15px;
+          font-size: 14px; /* Tamaño de fuente reducido para pantallas muy pequeñas */
+        }
+        .full-width-image {
+          height: 150px; /* Altura reducida para pantallas muy pequeñas */
+        }
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $("#contenidoHeader").load("../../header.html", function () {
+          initializeMenu();
+        });
+        $(".content").each(function (i) {
+          $(this).css("animation-delay", i * 1.5 + "s");
+        });
+        $(".image").each(function (i) {
+          $(this).css("animation-delay", i * 1.5 + "s");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="contenidoHeader"></div>
+    <div class="container">
+      <h2>La Clave para un Cabello Saludable: ¿Qué Shampoo y Crema Necesitas?</h2>
+      <div class="content-wrapper">
+        <img
+          class="image"
+          src="../assets/beauty-salon-4043096_1280.jpg"
+          alt="Tinte Semipermanente"
+        />
+        <div class="content">
+          <p>
+            Nuestro estilista es la persona que mejor conoce tanto la piel de nuestro cuero cabelludo como el tipo de cabello que tenemos. Por eso, ¿quién mejor que él para recomendarnos qué shampoo, crema, mascarilla o aceite debemos utilizar para cuidar nuestro cabello de manera adecuada? Además, cuando acudimos al salón y nos sometemos a tratamientos químicos, estos alteran el pH natural tanto del cuero cabelludo como del cabello. Es fundamental consultar a nuestro estilista de confianza para elegir el tipo de shampoo y crema adecuados que nos ayuden a contrarrestar los efectos de esos productos químicos.
+          </p>
+
+          <p>
+            Por ejemplo, al usar un color o una mecha, se desbalancea el pH natural del cabello debido a la acidez del producto. En este caso, necesitaremos un shampoo y una crema ácidos para neutralizar ese desequilibrio. Esta es una de las grandes diferencias entre los productos genéricos que podemos encontrar en una perfumería o supermercado y aquellos que nuestro estilista puede recomendarnos específicamente según nuestras necesidades.
+          </p>
+
+          
+        </div>
+      </div>
+      <img
+        class="full-width-image"
+        src="../assets/hairdressing-1516345_1280.jpg"
+        alt="Tinte Semipermanente"
+      />
+    </div>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">ELIZABET IMHOFF</div>
+        <div class="footer-info">
+          <p>
+            Dirección: Av. Gral. Paz 6000 , Santa Fe de la Vera Cruz, Santa Fe
+          </p>
+          <p>Teléfono: +54 9 342 479-9583</p>
+          <p>Facebook: ElizabetImhoffPeluqueria</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

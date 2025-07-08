@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELIZABET IMHOFF | Peluquería en Santa Fe, Argentina</title>
+    <meta name="description" content="Descubre la mejor peluquería en Santa Fe, Argentina. En ELIZABET IMHOFF ofrecemos cortes de pelo, coloraciones y tratamientos capilares excepcionales. ¡Visítanos!">
+    <meta name="keywords" content="peluquería, Santa Fe, Argentina, cortes de pelo, coloración, tratamientos capilares, ELIZABET IMHOFF">
+    <link rel="stylesheet" href="ofertas.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preload" href="../styles.css" as="style">
+    <link rel="icon" href="assets/logosinfondo.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Agrega la API de Google Maps en la etiqueta head -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../menu.js" defer></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('#contenidoHeader').load('../header.html', function() {
+                // Inicializa el menú después de que header.html se haya cargado
+                initializeMenu();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="contenidoHeader"></div>
+    <div class="hero">
+        <div class="overlay">
+            <h1 class="title">OFERTAS DEL DÍA</h1>
+            <div class="arrow">&#x2193;</div>
+        </div>
+    </div>
+    
+    <div class="consultation">
+        <p>¡Tu consulta no es molestia, estamos a tu disposición!</p>
+    </div>
+         <!-- Botón flotante -->
+         <a href="https://wa.me/543424799583" id="whatsapp-button" target="_blank">
+            <img src="assets/icons8-whatsapp-50.png" alt="WhatsApp">
+        </a>
+            <footer> 
+                <div class="footer-content">
+                <div class="footer-logo">ELIZABET IMHOFF</div>
+                <div class="footer-info">
+                    <p>Dirección: Av. Gral. Paz 6000 , Santa Fe de la Vera Cruz, Santa Fe</p>
+                    <p>Teléfono: +54 9 342 479-9583</p>
+                    <p>Facebook: ElizabetImhoffPeluqueria</p>
+                </div>
+            </div>
+            </footer>
+    <script src="ofertas.js"></script>
+</body>
+</html>

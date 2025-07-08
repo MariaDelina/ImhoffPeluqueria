@@ -1,0 +1,143 @@
+{
+  "hosting": {
+    "site": "elizabetimhoffpeluqueria",
+    "public": "public", 
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "firebase.json",         
+      ".firebaserc",            
+      "node_modules/**",        
+      "package-lock.json",      
+      "yarn.lock",              
+      "dist/**",                
+      "build/**",               
+      ".cache/**",              
+      ".tmp/**",                
+      ".idea/**",               
+      "docs/**",                
+      "tests/**",               
+      "*.md"        
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(js|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=3600, must-revalidate" 
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(png|jpg|jpeg|gif|webp|svg|ico)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000, public" 
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      
+      {
+        "source": "/blog/noticias/cuidatucabellocomoexperto",
+        "destination": "/blog/noticias/cuidatucabellocomoexperto.html"
+      },
+
+      {
+        "source": "/blog/noticias/shampoosulfato",
+        "destination": "/blog/noticias/shampoosulfato.html"
+      },
+
+      {
+        "source": "/blog/noticias/6consejoscuidadocabello",
+        "destination": "/blog/noticias/6consejoscuidadocabello.html"
+      },
+
+      {
+        "source": "/blog/noticias/pre-shampoo",
+        "destination": "/blog/noticias/pre-shampoo.html"
+      },
+
+      {
+        "source": "/blog/noticias/shampoocaidacabello",
+        "destination": "/blog/noticias/shampoocaidacabello.html"
+      },
+      
+      {
+        "source": "/blog/noticias/nuestroestilista",
+        "destination": "/blog/noticias/nuestroestilista.html"
+      },
+      {
+        "source": "/blog/noticias/lavarseelpelodiariamente",
+        "destination": "/blog/noticias/lavarseelpelodiariamente.html"
+      },
+      
+      {
+        "source": "/blog/noticias/beneficiostintesemipermanente",
+        "destination": "/blog/noticias/beneficiostintesemipermanente.html"
+      },
+      {
+        "source": "/blog/noticias/romero",
+        "destination": "/blog/noticias/romero.html"
+      },
+      {
+        "source": "/blog/noticias/tinteinoa",
+        "destination": "/blog/noticias/tinteinoa.html"
+      },
+      {
+        "source": "/blog/noticias/tendenciacoloracion2024",
+        "destination": "/blog/noticias/tendenciacoloracion2024.html"
+      },
+      {
+        "source": "/blog/noticias/guiateñido",
+        "destination": "/blog/noticias/guiaseñido.html"
+      },
+      {
+        "source": "/blog/noticias/coloracionsemipermanente",
+        "destination": "/blog/noticias/coloracionsemipermanente.html"
+      },
+      {
+        "source": "/blog/noticias/brondeybrunette",
+        "destination": "/blog/noticias/brondeybrunette.html"
+      },
+      {
+        "source": "/blog/**",
+        "destination": "/blog/blog.html"
+      },
+      
+      {
+        "source": "/contacto/**",
+        "destination": "/contacto/contacto.html"
+      },
+      {
+        "source": "/galeria/**",
+        "destination": "/galeria/galeria.html"
+      },
+      {
+        "source": "/ofertas/**",
+        "destination": "/ofertas/ofertas.html"
+      },
+  
+      {
+        "source": "/**",
+        "destination": "/index.html"
+      }
+    ],
+    "cleanUrls": true
+  },
+    "redirects": [
+      {
+        "source": "/old-page",
+        "destination": "/new-page",
+        "type": 301
+      }
+    ],
+    "errorPages": {
+      "404": "/404.html",
+      "500": "/500.html"
+    }
+  }

@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bona Nova SC", serif;
+    
+}
+
+
+body{
+    overflow-x: hidden !important;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* ESTILOS DEL BLOG*/
+/* Hero section */
+.hero-blog {
+    width: 100%; /* Ocupa todo el ancho */
+    height: 25vh; /* 1/4 de la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background: radial-gradient(circle, rgb(62, 13, 35) 0%, rgb(165, 2, 2) 100%);
+    position: relative;
+    z-index: 1; /* Asegura que esté por encima de los posts */
+}
+
+/* Ajustes para el texto dentro de la hero */
+.hero-blog h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-blog p {
+    font-size: 1.2em;
+}
+
+/* Responsive adjustments for hero section */
+@media screen and (max-width: 1200px) {
+    .hero-blog h1 {
+        font-size: 2.5em; /* Reduce el tamaño del texto en pantallas más pequeñas */
+    }
+
+    .hero-blog p {
+        font-size: 1em; /* Reduce el tamaño del párrafo en pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero-blog {
+        height: 20vh; /* Reduce la altura para pantallas más pequeñas */
+    }
+
+    .hero-blog h1 {
+        font-size: 2em; /* Ajusta el tamaño del texto en pantallas medianas */
+    }
+
+    .hero-blog p {
+        font-size: 0.9em; /* Ajusta el tamaño del párrafo en pantallas medianas */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-blog {
+        height: 30vh; /* Aumenta la altura para pantallas móviles */
+    }
+
+    .hero-blog h1 {
+        font-size: 1.8em; /* Ajusta el tamaño del texto en pantallas móviles */
+    }
+
+    .hero-blog p {
+        font-size: 0.8em; /* Ajusta el tamaño del párrafo en pantallas móviles */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-blog {
+        height: 35vh; /* Ajusta la altura para pantallas más pequeñas */
+    }
+
+    .hero-blog h1 {
+        font-size: 1.5em; /* Ajusta el tamaño del texto para pantallas muy pequeñas */
+    }
+
+    .hero-blog p {
+        font-size: 0.7em; /* Ajusta el tamaño del párrafo para pantallas muy pequeñas */
+    }
+}
+
+
+/* Contenedor de posts */
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 0; /* Eliminar el margen superior para que esté justo debajo de .hero */
+    min-height: 75vh; /* Ocupa el resto de la altura de la pantalla */
+}
+
+/* Estilos de cada post */
+.post {
+    position: relative;
+    width: 300px; /* Ajustar el tamaño del artículo */
+    height: 400px; /* Ajustar la altura del artículo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(100px); /* Inicialmente oculto hacia abajo */
+    transition: opacity 2s ease-out, transform 2s ease-out; /* Animación más lenta */
+}
+
+/* Imagen del post */
+.post img {
+    width: 100%;
+    height: 200px; /* Ajustar la altura de la imagen */
+    object-fit: cover;
+}
+
+/* Títulos y textos del post */
+.post h2 {
+    margin: 10px 0;
+    text-align: center;
+}
+.post h3 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.post p {
+    padding: 0 10px;
+    text-align: center;
+}
+
+.read-more {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    background-color: #4b0000; /* Color bordo */
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #6b0000; /* Color bordo oscuro */
+}
+
+/* Animación de entrada */
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100px); /* Inicia desde más arriba */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100px); /* Inicia desde más abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px); /* Inicia desde más a la izquierda */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px); /* Inicia desde más a la derecha */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Aplicar animaciones diferentes con duración extendida */
+.post:nth-child(1) {
+    animation: slideInFromLeft 2s ease-out forwards;
+}
+
+.post:nth-child(2) {
+    animation: slideInFromRight 2s ease-out forwards;
+}
+
+.post:nth-child(3) {
+    animation: slideInFromBottom 2s ease-out forwards;
+}
+
+.post:nth-child(4) {
+    animation: slideInFromTop 2s ease-out forwards;
+}
+
+.post:nth-child(5) {
+    animation: slideInFromLeft 2s ease-out forwards;
+}
+
+.post:nth-child(6) {
+    animation: slideInFromRight 2s ease-out forwards;
+}
+
+.post:nth-child(7) {
+    animation: slideInFromBottom 2s ease-out forwards;
+}
+
+.post:nth-child(8) {
+    animation: slideInFromTop 2s ease-out forwards;
+}
+
+/* Adaptar el diseño a diferentes pantallas */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+    .dropdown-content {
+        width: 100%;
+    }
+
+    .blog-posts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-posts .post {
+        width: 90%;
+        height: auto; /* Ajustar altura para móviles */
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .blog-posts .post {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .blog-posts .post {
+        width: 30%;
+    }
+}
+
+footer {
+    background-color: #4b0000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Estilos generales del botón flotante */
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia desde el fondo */
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+    background-color: #d4b8b8; /* Color burdeos */
+    border-radius: 50%; /* Botón redondeado */
+    padding: 10px; /* Espacio interno del botón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    z-index: 1000; /* Asegura que esté encima del resto del contenido */
+    transition: background-color 0.3s ease; /* Transición suave para cambios de color */
+}
+
+#whatsapp-button img {
+    width: 40px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    display: block;
+}
+
+/* Efecto hover para el botón */
+#whatsapp-button:hover {
+    background-color: #a03a3a; /* Color burdeos más oscuro al pasar el ratón */
+}

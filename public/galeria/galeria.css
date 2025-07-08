@@ -1,0 +1,139 @@
+/* Estilos generales */
+body {
+    font-family: 'Bona Nova SC', serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+.intro, .outro {
+    margin: 20px 0;
+}
+
+h1 {
+    color: rgb(165, 2, 2);
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+.slider-wrapper {
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.slide {
+    min-width: 24%;
+    margin: 0 0.2%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 599px) {
+    .slide {
+        min-width: 100%; /* Cada imagen ocupa el 100% del ancho del slider */
+        margin: 0;
+    }
+}
+
+/* Responsive para pantallas de tablets */
+@media (min-width: 600px) and (max-width: 899px) {
+    .slide {
+        min-width: 50%; /* Muestra dos imágenes a la vez */
+        margin: 0 1%;
+    }
+}
+
+/* Responsive para pantallas pequeñas de escritorio */
+@media (min-width: 900px) and (max-width: 1199px) {
+    .slide {
+        min-width: 33.33%; /* Muestra tres imágenes a la vez */
+        margin: 0 0.5%;
+    }
+}
+
+/* Responsive para pantallas de 1200px y más */
+@media (min-width: 1200px) and (max-width: 1599px) {
+    .slide {
+        min-width: 25%; /* Muestra cuatro imágenes a la vez */
+        margin: 0 0.5%;
+    }
+}
+
+/* Responsive para pantallas grandes y TV */
+@media (min-width: 1600px) {
+    .slide {
+        min-width: 20%; /* Muestra cinco imágenes a la vez */
+        margin: 0 0.5%;
+    }
+}
+footer {
+    background-color: #4b0000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Estilos generales del botón flotante */
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia desde el fondo */
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+    background-color: #d4b8b8; /* Color burdeos */
+    border-radius: 50%; /* Botón redondeado */
+    padding: 10px; /* Espacio interno del botón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    z-index: 1000; /* Asegura que esté encima del resto del contenido */
+    transition: background-color 0.3s ease; /* Transición suave para cambios de color */
+}
+
+#whatsapp-button img {
+    width: 40px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    display: block;
+}
+
+/* Efecto hover para el botón */
+#whatsapp-button:hover {
+    background-color: #a03a3a; /* Color burdeos más oscuro al pasar el ratón */
+}
